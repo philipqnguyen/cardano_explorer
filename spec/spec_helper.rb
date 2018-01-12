@@ -19,6 +19,7 @@ require 'pry'
 require 'webmock/rspec'
 require 'cardano_explorer'
 require 'shared/stubs/address_stubs'
+require 'shared/stubs/block_stubs'
 
 WebMock.disable_net_connect!
 
