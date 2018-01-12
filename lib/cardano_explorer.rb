@@ -4,6 +4,7 @@ require 'cardano_explorer/configuration'
 require 'cardano_explorer/base'
 require 'cardano_explorer/address'
 require 'cardano_explorer/block'
+require 'cardano_explorer/transaction'
 
 module CardanoExplorer
   def self.configuration
