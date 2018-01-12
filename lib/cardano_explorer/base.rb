@@ -11,11 +11,14 @@ module CardanoExplorer
     end
 
     def summary
-      @response ||= HTTParty.get "#{root_url}/#{endpoint}/#{hash}"
-      @response.parsed_response['Right']
+      response.parsed_response['Right']
     end
 
   private
+
+    def response
+      @response ||= HTTParty.get "#{root_url}/#{endpoint}/#{hash}"
+    end
 
     def root_url
       CardanoExplorer.configuration.root_url
