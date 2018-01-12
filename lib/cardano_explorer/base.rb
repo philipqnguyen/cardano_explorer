@@ -12,7 +12,7 @@ module CardanoExplorer
 
     def summary
       @response ||= HTTParty.get "#{root_url}/#{endpoint}/#{hash}"
-      @response.parsed_response
+      @response.parsed_response['Right']
     end
 
   private
