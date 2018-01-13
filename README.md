@@ -131,6 +131,12 @@ block.summary #=>
 # }
 ```
 
+#### Notes
+
+**Denominations**: The quantity of ADA coins is in denominations of Lovelaces.
+1 ADA == 1,000,000 Lovelaces. Learn more about denominations here:
+https://cardanodocs.com/cardano/monetary-policy/#treasury-and-fees
+
 ## Configuring
 
 You can change the root url like so:
