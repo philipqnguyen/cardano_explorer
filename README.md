@@ -56,7 +56,7 @@ Find a summary of a Transaction.
 
 ```ruby
 transaction_id = 'Ae2tdPwUPEZKmwoy3AU3cXb5Chnasj6mvVNxV1H11997q3VW5ihbSfQwGpm'
-transaction = CardanoExplorer::transaction.find transaction_id
+transaction = CardanoExplorer::Transaction.find transaction_id
 transaction.summary #=>
 # {
 #   "ctsId" => "7012fcaabcbc1be16afdaf754125c93e9216058321d4777c13c251d0cb5067fa",
