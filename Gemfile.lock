@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cardano_explorer (0.0.0)
+    cardano_explorer (0.1.0)
       httparty (~> 0.15.0)
 
 GEM
