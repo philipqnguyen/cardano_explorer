@@ -131,7 +131,7 @@ block.summary #=>
 # }
 ```
 
-#### Notes
+## Notes
 
 **Denominations**: The quantity of ADA coins is in denominations of Lovelaces.
 1 ADA == 1,000,000 Lovelaces. Learn more about denominations here:
