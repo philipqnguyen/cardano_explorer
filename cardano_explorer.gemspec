@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.authors     = ['Philip Nguyen']
   s.email       = 'supertaru@gmail.com'
-  s.files       = Dir['lib/   *.rb', 'README.md', 'LICENSE.txt']
+  s.files       = `git ls-files lib README.md CHANGELOG.md LICENSE`.split("\n")
   s.homepage    = 'https://github.com/philipqnguyen/cardano_explorer'
   s.license     = 'MIT'
   s.required_ruby_version = '>= 2.2.2'
