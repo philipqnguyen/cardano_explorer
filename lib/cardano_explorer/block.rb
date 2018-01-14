@@ -4,7 +4,7 @@ module CardanoExplorer
   private
 
     def endpoint
-      'api/blocks/summary'
+      'api/blocks'
     end
   end
 end

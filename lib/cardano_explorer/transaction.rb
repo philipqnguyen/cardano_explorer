@@ -4,7 +4,7 @@ module CardanoExplorer
   private
 
     def endpoint
-      'api/txs/summary'
+      'api/txs'
     end
   end
 end
