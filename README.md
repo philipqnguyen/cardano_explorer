@@ -131,6 +131,31 @@ block.summary #=>
 # }
 ```
 
+### Genesis
+
+Get a summary of the genesis block
+
+```ruby
+genesis = CardanoExplorer::Genesis.new
+genesis.summary #=>
+# {
+#   'cgsNumTotal' => 14505,
+#   'cgsNumRedeemed' => 12535,
+#   'cgsNumNotRedeemed' => 1970,
+#   'cgsRedeemedAmountTotal' => {
+#     'getCoin' => '29083491488000000'
+#   },
+#   'cgsNonRedeemedAmountTotal' => {
+#     'getCoin' => '2028993257000000'
+# }
+```
+
+Get the total pages of the genesis block
+
+```ruby
+genesis = CardanoExplorer::Genesis.new
+genesis.pages_total #=> 1451
+```
 ## Notes
 
 **Denominations**: The quantity of ADA coins is in denominations of Lovelaces.
