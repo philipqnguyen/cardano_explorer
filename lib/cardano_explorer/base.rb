@@ -11,13 +11,14 @@ module CardanoExplorer
     end
 
     def summary
-      response("#{endpoint}/summary/#{@hash}").parsed_response['Right']
+      @summary ||= get "#{endpoint}/summary/#{@hash}"
+      @summary.parsed_response['Right']
     end
 
   private
 
-    def response(path, options = {})
-      @response ||= HTTParty.get "#{root_url}/#{path}", query: options
+    def get(path, options = {})
+      HTTParty.get "#{root_url}/#{path}", query: options
     end
 
     def root_url
