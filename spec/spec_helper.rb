@@ -22,6 +22,7 @@ require 'shared/stubs/address_stubs'
 require 'shared/stubs/block_stubs'
 require 'shared/stubs/transaction_stubs'
 require 'shared/examples/base_examples'
+require 'shared/stubs/genesis_stubs'
 
 WebMock.disable_net_connect!
 
