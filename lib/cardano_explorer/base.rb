@@ -11,7 +11,7 @@ module CardanoExplorer
     end
 
     def summary
-      @summary ||= get "summary/#{@hash}"
+      @summary ||= get "summary/#{hash}"
       @summary.parsed_response['Right']
     end
 
