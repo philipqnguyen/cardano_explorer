@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/philipqnguyen/cardano_explorer.svg?branch=master)](https://travis-ci.org/philipqnguyen/cardano_explorer)
+
 # Cardano Explorer
 
 A Ruby gem that wraps the Cardano SL Explorer API. At the moment, you can
