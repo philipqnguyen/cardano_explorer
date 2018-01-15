@@ -6,7 +6,7 @@ module CardanoExplorer
       new hash
     end
 
-    def initialize(hash)
+    def initialize(hash = nil)
       @hash = hash
     end
 
