@@ -8,7 +8,7 @@ module CardanoExplorer
     def pages_total(options = {})
       valid_params = %w[pageSize redeemeed]
       options = options.keep_if { |k| valid_params.include?(k) }
-      get('address/pages/total', options).parsed_response['Right']
+      get_and_parse 'address/pages/total', options
     end
 
   private
