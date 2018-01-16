@@ -8,15 +8,15 @@ describe 'Transaction' do
   let(:stubbed_request) {stub_get_transaction_summary hash}
   let(:stubbed_request_latest) {stub_get_transaction_latest}
 
+  it_behaves_like 'Base'
+
   describe '#latest' do
     before { stubbed_request_latest }
 
-    it { expect(base.summary).to be_a(Hash) }
+    it { expect(base.latest).to be_a(Array) }
     it 'should make an HTTP request' do
       base.latest
       expect(stubbed_request_latest).to have_been_requested.once
     end
   end
-
-  it_behaves_like 'Base'
 end
