@@ -103,6 +103,40 @@ transaction.summary #=>
 # }
 ```
 
+Get information about the last 20 transactions.
+
+```ruby
+transactions = CardanoExplorer::Transaction.new
+transactions.latest
+# [
+#   {
+#       "cteAmount": {
+#           "getCoin": "1837365186664"
+#       },
+#       "cteId": "d93a355fa569b6567a2d0f5d94b936f6f5ac1ed4273794f7e680a0a63c1e6285",
+#       "cteTimeIssued": 1516118611
+#   },
+#   {
+#       "cteAmount": {
+#           "getCoin": "1137657029707"
+#       },
+#       "cteId": "f54571d5b8591c50bf7ad7cab800f588d446a80131b7d9a2859042546e75f16f",
+#       "cteTimeIssued": 1516117891
+#   },
+#   {
+#       "cteAmount": {
+#           "getCoin": "922487318"
+#       },
+#       "cteId": "9cbeb036626d661239f3efcc6373c855d74e76875d646e1fdbc4cc0a6d788acb",
+#       "cteTimeIssued": 1516117891
+#   },
+#   ..
+#   ....
+#   ......
+# ]
+```
+
+
 ### Block
 
 Find a summary of a Block.
