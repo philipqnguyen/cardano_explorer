@@ -103,6 +103,30 @@ transaction.summary #=>
 # }
 ```
 
+Get the latest transactions.
+
+```ruby
+CardanoExplorer::Transaction.latest #=>
+# [
+#   #<CardanoExplorer::Transaction:0x00000001b39808 @hash="d5a71c0a0e59d57d17c2e3466447fdd58e312dd99c0e3d07682b9796ce7aec69">,
+#   #<CardanoExplorer::Transaction:0x00000001b397e0 @hash="fb91a2d4943e70cd85c65d036962ba915544a5d963d26f4cd3ea8d9eb55d3040">,
+#   ...
+#  ]
+```
+
+Each of these is an instance of `CardanoExplorer::Transaction` with its methods.
+
+```ruby
+transactions = CardanoExplorer::Transaction.latest
+transactions.first.summary #=>
+# {
+#   "ctsId" => "7012fcaabcbc1be16afdaf754125c93e9216058321d4777c13c251d0cb5067fa",
+#   "ctsTxTimeIssued" => 1515795491,
+#   "ctsBlockTimeIssued" => 1515795491,
+#    ...
+# }
+```
+
 ### Block
 
 Find a summary of a Block.

@@ -56,4 +56,33 @@ module TransactionStubs
       .with(headers: request_headers)
       .to_return(status: 200, body: body.to_json, headers: response_headers)
   end
+
+  def stub_last_transaction
+    url = 'https://cardanoexplorer.com/api/txs/last'
+    request_headers = {
+      'Accept'=>'*/*',
+      'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+      'User-Agent'=>'Ruby'
+    }
+    response_headers = {
+      content_type: 'application/json;charset=utf-8'
+    }
+    body = {
+      "Right" => [
+        {
+          "cteId":"93310561af41f06d924c412d98cf7a9026fe229533632369d97840610631a207",
+          "cteTimeIssued":1516487111,
+          "cteAmount": {"getCoin":"417999652261"}
+        },
+        {
+          "cteId":"3759b5967c83cafd0d7ffbb49a77088be3a29fd16485898981bc65ebc69ce661",
+          "cteTimeIssued":1516487071,
+          "cteAmount":{"getCoin":"418002823331"}
+        }
+      ]
+    }
+    stub_request(:get, "#{url}")
+      .with(headers: request_headers)
+      .to_return(status: 200, body: body.to_json, headers: response_headers)
+  end
 end

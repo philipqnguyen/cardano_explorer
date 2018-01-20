@@ -8,12 +8,12 @@ module CardanoExplorer
     def pages_total(options = {})
       valid_params = %w[pageSize redeemeed]
       options = options.keep_if { |k| valid_params.include?(k) }
-      get('address/pages/total', options).parsed_response['Right']
+      self.class.get('address/pages/total', options).parsed_response['Right']
     end
 
   private
 
-    def endpoint
+    def self.endpoint
       'api/genesis'
     end
   end

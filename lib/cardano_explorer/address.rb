@@ -3,7 +3,7 @@ module CardanoExplorer
 
   private
 
-    def endpoint
+    def self.endpoint
       'api/addresses'
     end
   end
