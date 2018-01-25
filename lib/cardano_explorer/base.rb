@@ -11,22 +11,23 @@ module CardanoExplorer
     end
 
     def summary
-      @summary ||= get "summary/#{hash}"
+      @summary ||= self.class.get "summary/#{hash}"
       @summary.parsed_response['Right']
     end
 
   private
 
-    def get(path, options = {})
+    def self.get(path, options = {})
       HTTParty.get "#{root_url}/#{endpoint}/#{path}", query: options
     end
 
-    def root_url
+    def self.root_url
       CardanoExplorer.configuration.root_url
     end
 
-    def endpoint
+    def self.endpoint
       raise NotImplementedError, '#endpoint not defined in child class'
     end
+
   end
 end
