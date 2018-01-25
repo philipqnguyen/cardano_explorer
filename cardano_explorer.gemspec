@@ -5,7 +5,6 @@ require 'cardano_explorer/version'
 Gem::Specification.new do |s|
   s.name        = 'cardano_explorer'
   s.version     = CardanoExplorer::VERSION
-  s.date        = '2018-01-10'
   s.summary     = 'A Ruby API wrapper to query the Cardano SL Explorer'
   s.description = 'A Ruby API wrapper to query the Cardano SL Explorer'
   s.license     = 'MIT'
